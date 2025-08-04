@@ -123,10 +123,13 @@ endif
 endif
 
 # Bootanimation
+INCLUDE_LINEAGE_BOOTANIMATION := false
+ifneq ($(INCLUDE_LINEAGE_BOOTANIMATION),false)
 TARGET_SCREEN_WIDTH ?= 1080
 TARGET_SCREEN_HEIGHT ?= 1920
 PRODUCT_PACKAGES += \
     bootanimation.zip
+endif
 
 # Build Manifest
 PRODUCT_PACKAGES += \
